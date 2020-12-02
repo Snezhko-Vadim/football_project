@@ -603,7 +603,7 @@ async function mainContentMaker(url,token,availableCompetitions,mainContent,cach
 } */
 
 
-let url = 'http://api.football-data.org/v2/';
+let url = 'https://api.football-data.org/v2/';
 let token = '7d9c12f5860048e2b3a48176691a5ece';
 let availableCompetitions = [2000,2001,2002,2003,2013,2014,2015,2016,2017,2018,2019,2021];
 let cache = new CacheWithRecentActions(5);
