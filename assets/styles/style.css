@@ -1,0 +1,443 @@
+.parallax{
+    background: url('../images/bg_5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 3840px;
+    z-index: -1;
+}
+.hide{
+      display: none;
+    }
+    
+body{
+    margin: 0;
+}
+.main{
+    padding: 0 105px 0 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 3000px;
+    margin: 0 auto;
+}
+.main__content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.main__title{
+    margin-top: 70px;
+    margin-bottom: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 140px;
+    font-weight: 500;
+    color: rgb(223, 211, 195);
+}
+.competitions-list{
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    color: rgb(223, 211, 195);
+}
+.competitions-list__item{
+    margin-top: 15px;
+    cursor: pointer;
+}
+.competitions-list__item:hover{
+    color: white;
+    transform: scale(1.15);
+    transition-property:all;
+    transition-duration: 100ms;
+}
+.competitions-list__item:active{
+    transform: scale(1);
+    transition-property:all;
+    transition-duration: 50ms;
+}
+.main__back-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    font-size: 50px;
+    color: rgb(223, 211, 195);
+    outline: none;
+}
+.main__refresh{
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    font-size: 50px;
+    color: rgb(223, 211, 195);
+    outline: none;
+}
+.main__back-btn i,
+.main__refresh i{
+    padding: 10px;
+}
+@keyframes translate{
+    50%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes rotate{
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+.main__back-btn:hover{
+    animation: translate 600ms ease infinite;
+}
+.main__refresh:hover{
+    animation: rotate 800ms linear infinite;
+}
+.main__back-btn:active{
+    color: white;
+    transition-duration: 80ms;
+}
+.main__refresh:active{
+    color: white;
+    transition-duration: 80ms;
+}
+.standing{
+    text-align: center;
+}
+.standing__title{
+    margin-top: 30px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+    color: rgb(223, 211, 195);
+}
+.standing__info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.standing__current-day{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(223, 211, 195);
+    font-size: 23px;
+    margin: 0;
+}
+.standing__nav-item{
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: rgb(223, 211, 195);
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    text-transform: capitalize;
+    border-radius: 8px;
+    margin-left: 10px;
+    padding: 3px 20px;
+}
+.standing__nav-item:hover{
+    color: rgb(255, 255, 255);
+    transition-property:all;
+    transition-duration: 100ms;
+}
+.standing__nav-item_active{
+    background-color:  rgba(179, 179, 179, 0.644);
+    box-shadow: 0px 0px 20px 2px rgba(169, 204, 162, 0.705);
+}
+.standing-table{
+    background-color: rgba(211, 211, 211, 0.63);
+    box-shadow: 0px 0px 20px 2px rgba(169, 204, 162, 0.705);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 20px;
+    margin: 30px 0;
+}
+.standing-table__title{
+    margin:0;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: rgb(223, 211, 195);
+}
+.team{
+    width: 100%;
+}
+.team-icon{
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+}
+.team-name{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.team-name:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    transition-property:all;
+    transition-duration: 100ms;
+}
+.team-name:active{
+    transform: scale(1);
+    transition-property:all;
+    transition-duration: 50ms;
+}
+.standing-table__team-name{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.standing-table__string .standing-table__cell:nth-child(1){
+    width: 30px;
+    padding: 0 10px;
+}
+.standing-table__string .standing-table__cell:nth-child(2){
+    width: 400px;
+    padding: 0 10px;
+}
+.standing-table__string .standing-table__cell:nth-child(3),
+.standing-table__string .standing-table__cell:nth-child(4),
+.standing-table__string .standing-table__cell:nth-child(5),
+.standing-table__string .standing-table__cell:nth-child(6),
+.standing-table__string .standing-table__cell:nth-child(8),
+.standing-table__string .standing-table__cell:nth-child(9){
+    width: 45px;
+    padding: 0 10px;
+}
+.standing-table__string .standing-table__cell:nth-child(7){
+    width: 70px;
+    padding: 0 10px;
+}
+.standing-table__string .standing-table__cell:nth-child(10){
+    width: 170px;
+    padding: 0 10px;
+}
+.standing-table__string:nth-child(1) .standing-table__cell:nth-child(1),
+.standing-table__string:nth-child(1) .standing-table__cell:nth-child(2),
+.standing-table__string:nth-child(1) .standing-table__cell:nth-child(3),
+.standing-table__string:nth-child(1) .standing-table__cell:nth-child(4),
+.standing-table__string:nth-child(1) .standing-table__cell:nth-child(5),
+.standing-table__string:nth-child(1) .standing-table__cell:nth-child(6),
+.standing-table__string:nth-child(1) .standing-table__cell:nth-child(7),
+.standing-table__string:nth-child(1) .standing-table__cell:nth-child(8),
+.standing-table__string:nth-child(1) .standing-table__cell:nth-child(9),
+.standing-table__string:nth-child(1) .standing-table__cell:nth-child(10){
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.indecator-draw{
+    color: rgb(255, 166, 0);
+}
+.indecator-win{
+    color: rgb(8, 201, 8);
+}
+.indecator-lost{
+    color: rgb(224, 0, 0);
+}
+.standing-table__cell {
+    height: 40px;
+}
+.standing-table__last-matches-indecator{
+    padding: 0 3px;
+}
+.team{
+    text-align: center;
+}
+.team__title-icon{
+    width: 300px;
+    height: 300px;
+}
+.team__title-text{
+    margin:0;
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 85px;
+    font-weight: 500;
+    color: rgb(223, 211, 195);
+}
+.team__content{
+    margin-top: 40px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.377);
+    box-shadow: 0px 0px 20px 2px rgba(169, 204, 162, 0.705);
+    border-radius: 50px;
+}
+.team__information{
+    margin-right: 20px;
+}
+.team__information-title,
+.team__matches-title{
+    margin:0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    color: rgb(223, 211, 195);
+}
+.team__information-title{
+    text-align: center;
+}
+.team__matches-title{
+    text-align: right;
+}
+.team__information-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.team__information-name{
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    color: rgb(223, 211, 195);
+    text-align: left;
+}
+.team__information-list{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: rgb(223, 211, 195);
+}
+.team__information-list-item{
+    margin-bottom: 15px;
+}
+.team__information-item{
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+.team__information-item:nth-child(1){
+    align-items: flex-start;
+}
+.team__information-text{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: rgb(223, 211, 195);
+    margin-left: 15px;
+}
+.team__information-list{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.team__matches{
+    text-align: center;
+}
+.team__matches-list{
+    padding: 0;
+    list-style-type: none;
+    max-height: 870px;
+    overflow: auto;
+}
+.team__matches-list::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgba(207, 207, 207, 0.555);
+    border-radius: 10px;
+}
+.team__matches-list::-webkit-scrollbar-thumb {
+    background-color: rgba(211, 195, 174, 0.781);
+    border-radius: 10px;
+    box-shadow: none
+}
+.team__matches-list-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    color: rgb(223, 211, 195);
+    font-weight: bolder;
+    margin-bottom: 20px 0;
+}
+.team__matches-list-info{
+    text-align: right;
+}
+.team__matches-list-versus,
+.team__matches-list-date,
+.team__matches-list-time{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: rgb(223, 211, 195);
+    font-weight: normal;
+    margin: 0;
+}
+.team__matches-empty{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: rgb(223, 211, 195);
+    font-weight: normal;
+    margin: 0;
+}
+@media (min-width: 760px) and (max-width: 1050px) {
+    .team__content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .standing__info{
+        flex-direction: column;
+    }
+    .team__matches-list-item{
+        text-align: center;
+    }
+    .team__matches-title{
+        text-align: center;
+    }
+}
+@media (min-width: 300px) and (max-width: 760px){
+    .standing-table__team-name{
+        display: flex;
+        justify-content: center;
+    }
+    .main__title{
+        font-size: 55px;
+    }
+    .standing__title{
+        font-size: 45px;
+    }
+    .main{
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .standing-table,
+    .team-name{
+        font-size: 15px;
+    }
+    .standing__current-day,
+    .standing__nav,
+    .competitions-list__item,
+    .standing-table__title{
+        font-size: 16px;
+    }
+}
